@@ -15,14 +15,12 @@ public class EstudianteServicio implements IEstudianteServicio{
 
     @Override
     public List<Estudiante> listarEstudiante() {
-        List<Estudiante> estudiantes = estudianteRepositorio.findAll();
-        return estudiantes;
+        return estudianteRepositorio.findAll();
     }
 
     @Override
     public Estudiante buscarEstudiantePorId(Integer idEstudiante) {
-        Estudiante estudiante = estudianteRepositorio.findById(idEstudiante).orElse(null);
-        return estudiante;
+        return estudianteRepositorio.findById(idEstudiante).orElse(null);
     }
 
     @Override

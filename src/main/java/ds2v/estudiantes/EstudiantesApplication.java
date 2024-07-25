@@ -58,7 +58,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 				4. Modificar Estudiante
 				5. Eliminar Estudiante
 				6. Salir
-				Ingrese la opcion deseada: 
+				Ingrese la opcion deseada:
 				""");
 	}
 
@@ -95,7 +95,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 				Estudiante estudiante = estudianteServicio.buscarEstudiantePorId(codigo);
 				if (estudiante != null){
 					logger.info("Estudiante encontrado" + nl);
-					logger.info(estudiante.toString() + nl);
+					logger.info(estudiante + nl);
 				}else
 					logger.info("Estudiante con codigo " + codigo + " no encontrado" + nl);
 			}
@@ -135,9 +135,7 @@ public class EstudiantesApplication implements CommandLineRunner {
 				logger.info("Regrese pronto!" + nl);
 				salir = true;
 			}
-			default -> {
-				logger.info("Ingrese una opcion valida (1 - 6)" + nl);
-			}
+			default -> logger.info("Ingrese una opcion valida (1 - 6)" + nl);
 		}
 		return salir;
 	}
